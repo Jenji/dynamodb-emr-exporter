@@ -3,12 +3,12 @@
     "InstanceCount": 1,
     "Name": "Master",
     "InstanceGroupType": "MASTER",
-    "InstanceType": "m1.xlarge"
+    "InstanceType": "m3.xlarge"
   },
   {
     "InstanceCount": 1,
     "Name": "Workers",
     "InstanceGroupType": "CORE",
-    "InstanceType": "m1.xlarge"
+    "InstanceType": "m3.xlarge"
   }
 ]
