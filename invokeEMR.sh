@@ -193,7 +193,7 @@ if [ $NEXTPHASE == 1 ]; then
                 CLUSTERID=$(aws emr create-cluster --name "${CLUSTER_NAME}"                                        \
                             --ami-version 3.8.0                                                                    \
                             --service-role "EMR_DefaultRole"                                                       \
-                            --tags Name=${CLUSTER_NAME} signiant:product=devops signiant:email=devops@signiant.com \
+                            --tags Name=${CLUSTER_NAME}                                                            \
                             --enable-debugging                                                                     \
                             --log-uri ${S3LOCATION}/emr-logs                                                       \
                             --applications file://${JSON_OUTPUT_DIR}/applications.json                             \
