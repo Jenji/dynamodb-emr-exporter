@@ -88,7 +88,7 @@ fi
 logMsg "Starting up"
 
 ######
-## PHASE 1 - See if there are any clusters already runing with our name.  If there are, exit
+## PHASE 1 - See if there are any clusters already running with our name.  If there are, exit
 ######
 aws emr list-clusters --active --profile ${PROFILE} | grep -q ${CLUSTER_NAME}
 STATUS=$?
@@ -236,7 +236,7 @@ if [ $NEXTPHASE == 1 ]; then
         ## Phase 3.5 - poll the cluster for status so we know when it's done
         ####
         if [ $CLUSTERUP == 1 ]; then
-                # We have a cluster provisioned...now we can poll it's tasks and make sure it completes ok
+                # We have a cluster provisioned... now we can poll it's tasks and make sure it completes ok
 
                 # First tag the backup as in progress so any downstream processes know not to copy this
                 logMsg "Writing BACKUP_RUNNING_LOCK file for this backup"

@@ -6,7 +6,7 @@ Uses EMR clusters to export and import dynamoDB tables to/from S3.  This uses th
 * Clone this repo to a folder called /usr/local/dynamodb-emr
 * Install python
 ``` apt-get install python ```
- * Install the python dependancies
+ * Install the python dependencies
 ``` pip install -r requirements.txt ```
 * Configure at least one [boto profile](http://boto.cloudhackers.com/en/latest/boto_config_tut.html)
 * Create a new IAM role called dynamodb_emr_backup_restore using the IAM policy contained in _**dynamodb_emr_backup_restore.IAMPOLICY.json**_
@@ -14,7 +14,7 @@ Uses EMR clusters to export and import dynamoDB tables to/from S3.  This uses th
 >The role name can be changed by editing common-json/ec2-attributes.json
 
 * Configure the size of your EMR cluster
- 
+
 >Edit the *common-json/instance-groups.json file* to set the number of masters and workers (typically, a single master and worker is fine)
 
 * Run the invokeEMR.sh script as follows
@@ -35,9 +35,9 @@ Where
 
 ## Import Usage
 
-When the export runs, it also generates the configuration needed to execute an import. You can find the configuration file for imorting within the json output directory you used for the export (importSteps.json).  It is also copied to the S3 bucket at the completion of the export.
+When the export runs, it also generates the configuration needed to execute an import. You can find the configuration file for importing within the json output directory you used for the export (importSteps.json). It is also copied to the S3 bucket at the completion of the export.
 
-### Running the import 
+### Running the import
 
 Before running the import, you need to perform 2 tasks
 
@@ -73,8 +73,7 @@ The basic mechanics of the process are as follows
 3. Call the python script to generate the steps (tasks) for EMR for each table.  This essentially lists all the tables in the region, applies the provided filter and then generates the JSON that can be passed to EMR to export the tables
 4. Once the steps JSON is present, create a new cluster with the AWS CLI. We have to handle cluster setup failure here so retries are used for failures.
 5. Submit the tasks to the cluster and poll the cluster until it's complete.  Any errors of a step will result in a failure being logged
-6. Once we know everyyhing was successful, write the export and import steps files to S3 in case this machine has issues.  We also write flag files to S3 indicating the progress of the export (in progress, complete, error, etc.) in case another process needs to ingest this data, it can poll on these status files.
-
+6. Once we know everything was successful, write the export and import steps files to S3 in case this machine has issues.  We also write flag files to S3 indicating the progress of the export (in progress, complete, error, etc.) in case another process needs to ingest this data, it can poll on these status files.
 
 ### Import
 
