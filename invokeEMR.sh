@@ -99,7 +99,7 @@ if [ $STATUS == 0 ]; then
         NEXTPHASE=0
         RETCODE=2
 else
-        logMsg "No existing EMR cluster with  name ${CLUSTER_NAME} running.  Creating"
+        logMsg "No existing EMR cluster with name ${CLUSTER_NAME} running. Creating"
         NEXTPHASE=1
 fi
 
@@ -236,7 +236,7 @@ if [ $NEXTPHASE == 1 ]; then
         ## Phase 3.5 - poll the cluster for status so we know when it's done
         ####
         if [ $CLUSTERUP == 1 ]; then
-                # We have a cluster provisioned... now we can poll it's tasks and make sure it completes ok
+                # We have a cluster provisioned... now we can poll its tasks and make sure it completes ok
 
                 # First tag the backup as in progress so any downstream processes know not to copy this
                 logMsg "Writing BACKUP_RUNNING_LOCK file for this backup"

@@ -1,5 +1,5 @@
 # DynamoDB EMR Exporter
-Uses EMR clusters to export and import dynamoDB tables to/from S3.  This uses the same routines as dataPipeline BUT it runs everything though a single cluster for all tables rather than a cluster per table.
+Uses EMR clusters to export and import dynamoDB tables to/from S3. This uses the same routines as Data Pipeline BUT it runs everything though a single cluster for all tables rather than a cluster per table.
 
 ## Export Usage
 

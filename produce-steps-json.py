@@ -191,7 +191,7 @@ def generateTableImportStep(tableName,s3Path,writetput,impregion):
   return tableImportDict
 
 ###########
-## Add a JSON entry for the taskRunner installation step.  Common to export and import
+## Add a JSON entry for the taskRunner installation step. Common to export and import
 ###########
 def addTaskRunnerStep():
   myLog("addTaskRunnerStep")
@@ -233,13 +233,13 @@ def generateS3Path(basePath,region,dateStr,appname):
   return s3Path
 
 ###########
-## Obtain a list of dynamoDB tables from the current region
+## Obtain a list of DynamoDB tables from the current region
 ###########
 def listTables(conn):
 
   table_list_return = []
 
-  # Get the inital list of tables. boto only returns the first 100 tho....
+  # Get the initial list of tables. boto only returns the first 100 tho....
   table_list = conn.list_tables()
 
   moreTables = True
