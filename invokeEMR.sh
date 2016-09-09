@@ -15,7 +15,7 @@ REGION=eu-west-1
 RETRY_DELAY=10
 
 # Just vars
-INSTALL_DIR=/usr/local/dynamodb-emr
+INSTALL_DIR=.
 COMMON_JSON=${INSTALL_DIR}/common-json
 STEP_PRODUCER=${INSTALL_DIR}/produce-steps-json.py
 NEXTPHASE=0
