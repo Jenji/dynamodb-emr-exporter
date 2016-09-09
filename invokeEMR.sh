@@ -11,7 +11,7 @@ S3LOCATION=$7
 
 # Hard-codes (but can be changed here)
 WRITE_TPUT=0.8		# Used when we generate the Import steps
-REGION=us-east-1
+REGION=eu-west-1
 RETRY_DELAY=10
 
 # Just vars

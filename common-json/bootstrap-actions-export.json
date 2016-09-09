@@ -5,7 +5,7 @@
          "fs.s3.enableServerSideEncryption=true"
       ],
       "Name":"bootstrap-action.enableServerSideEncryption",
-      "Path":"s3://us-east-1.elasticmapreduce/bootstrap-actions/configure-hadoop"
+      "Path":"s3://eu-west-1.elasticmapreduce/bootstrap-actions/configure-hadoop"
    },
    {  
       "Args":[  
@@ -29,6 +29,6 @@
          "mapreduce.map.speculative=false"
       ],
       "Name":"bootstrap-action.setMemory",
-      "Path":"s3://us-east-1.elasticmapreduce/bootstrap-actions/configure-hadoop"
+      "Path":"s3://eu-west-1.elasticmapreduce/bootstrap-actions/configure-hadoop"
    }
 ]
