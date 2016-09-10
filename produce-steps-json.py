@@ -92,7 +92,7 @@ parser.add_argument(
 def myLog(message):
   procName = __file__
   currDTS = datetime.datetime.now()
-  dateTimeStr = currDTS.strftime('%Y/%B/%d/ %H:%M:%S')
+  dateTimeStr = currDTS.strftime('%F %H:%M:%S')
 
   syslogMsg = procName + ": " + message
   syslog.syslog(syslogMsg)
