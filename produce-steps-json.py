@@ -101,7 +101,7 @@ def myLog(message):
 def main(region,filter,destination,impregion,writetput,readtput,s3location,profile,appname):
 
   retCode = 0
-  dateStr = datetime.datetime.now().strftime("%Y/%m/%d/%H_%M.%S")
+  dateStr = datetime.datetime.now().strftime("%Y/%m/%d/%H-%M-%S")
 
   conn = boto.dynamodb2.connect_to_region(region,profile_name=profile)
 
